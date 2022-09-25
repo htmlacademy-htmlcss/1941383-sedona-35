@@ -1,8 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Никита Рунов](https://up.htmlacademy.ru/htmlcss/35/user/1941383).
-* Наставник: [Дмитрий
-Виноградов] (https://htmlacademy.ru/profile/id839417).
+* Наставник: [Дмитрий Виноградов](https://htmlacademy.ru/profile/id839417).
 
 ---
 
