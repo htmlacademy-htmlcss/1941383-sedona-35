@@ -9,31 +9,33 @@
   <body>
     <header class="page-header">
       <nav class="navigation">
-        <img class="header-logo" src="#" alt="Логотип «Седона»">
+        <a class="header-logo" href="index.html">
+          <img class="header-logo" src="images/logo.svg" alt="Логотип Седона." width="140" height="70">
+        </a>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a href="#" class="navigation-link">Главная</a>
+            <a class="navigation-link" href="#">Главная</a>
           </li>
           <li class="navigation-item">
-            <a href="#" class="navigation-link">О седоне</a>
+            <a class="navigation-link" href="#">О седоне</a>
           </li>
           <li class="navigation-item">
-            <a href="" class="navigation-link">Гостиницы</a>
+            <a class="navigation-link navigation-active">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
-            <a href="#" class="navigation-link">
+            <a class="navigation-link" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="navigation-item">
-            <a href="#" class="navigation-link">
+            <a class="navigation-link" href="#">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
           <li class="navigation-item">
-            <a href="#" class="navigation-link">Хочу сюда!</a>
+            <a class="navigation-link" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -43,8 +45,14 @@
       <section class="page-filter-hotels">
         <h1 class="innter-header-title">Гостиницы Седоны</h1>
         <ul class="breadscrumbs">
-          <li class="breadscrumbs-item"><a href="index.html" class="breadscrumbs-link"></a></li>
-          <li class="breadscrumbs-item"><a href="" class="breadscrumbs-link">Гостиницы</a></li>
+          <li class="breadscrumbs-item">
+            <a class="breadscrumbs-link" href="index.html">
+              <img src="images/icons/home.svg" width="12" height="12" alt="Домой.">
+            </a>
+          </li>
+          <li class="breadscrumbs-item">
+            <a class="breadscrumbs-link">Гостиницы</a>
+          </li>
         </ul>
       </section>
 
@@ -89,9 +97,9 @@
 
           <fieldset class="filter-price">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-            <input type="text" class="min-price" value="0" name="min-price">
-            <input type="text" class="max-price" value="9000" name="max-price">
-            <input type="range" min="0" max="9000" class="price-range">
+            <input class="min-price" type="text" value="0" name="min-price">
+            <input class="max-price" type="text" value="9000" name="max-price">
+            <input class="price-range" type="range" min="0" max="9000">
           </fieldset>
 
           <button class="button" type="submit">Применить</button>
@@ -101,7 +109,7 @@
 
       <section class="sort-catalog">
         <h2 class="visually-hidden">Сортировка товаров с фильтрами</h2>
-        <select class="filter-content" name="filter-content" id="filter-content" aria-label="Сортировка">
+        <select class="filter-content" name="filter-content" id="filter-content" aria-label="сортировка.">
           <option value="cheap">Сначала дешёвые</option>
         </select>
 
@@ -119,60 +127,72 @@
       <h2 class="visually-hidden">Карточки товаров</h2>
       <ul class="products-list">
         <li class="product-card">
-          <a href="#" class="product-card-link">
-            <img src="#" class="product-card-image" alt="звёздное небо и горы">
+          <a class="product-card-link" href="#">
+            <img class="product-card-image" src="images/hotel-1.jpg" width="300" height="212" alt="Звёздное небо и горы.">
             <h3 class="product-card-title">Amara Resort & Spa</h3>
           </a>
           <dl class="product-card-hotel-price">
             <dt class="product-card-type">Гостиница</dt>
             <dd class="product-card-price">От 4000 ₽</dd>
           </dl>
-          <a href="#" class="button product-card-button">подробнее</a>
-          <button type="submit" class="button product-card-submit">в избранное</button>
-          <img src="#" alt="звёздочка">
+          <a class="button product-card-button" href="#">подробнее</a>
+          <button class="button product-card-submit" type="submit">в избранное</button>
+          <div class="hotel-stars">
+            <span class="visually-hidden">4 звезды</span>
+            <span class="stars-count-4"></span>
+          </div>
           <span class="button product-button-rating">Рейтинг: 8,5</span>
         </li>
         <li class="product-card">
-          <a href="#" class="product-card-link">
-            <img src="#" class="product-card-image" alt="Горы на фоне радуги">
+          <a class="product-card-link" href="#">
+            <img class="product-card-image" src="images/hotel-2.jpg" width="300" height="212" alt="Горы на фоне радуги.">
             <h3 class="product-card-title">Villas at Poco Diablo</h3>
           </a>
           <dl class="product-card-hotel-price">
             <dt class="product-card-type">Гостиница</dt>
             <dd class="product-card-price">От 5000 ₽</dd>
           </dl>
-          <a href="#" class="button product-card-button">подробнее</a>
-          <button type="submit" class="button product-card-submit">в избранном</button>
-          <img src="#" alt="звёздочка">
-          <button class="button product-button-rating">Рейтинг: 9,5</button>
+          <a class="button product-card-button" href="#">подробнее</a>
+          <button class="button product-card-submit" type="submit">в избранном</button>
+          <div class="hotel-stars">
+            <span class="visually-hidden">4 звезды</span>
+            <span class="stars-count-4"></span>
+          </div>
+          <span class="button product-button-rating">Рейтинг: 9,2</span>
         </li>
         <li class="product-card">
-          <a href="#" class="product-card-link">
-            <img src="#" class="product-card-image" alt="жёлтые горы и голубое небо">
+          <a class="product-card-link" href="#">
+            <img class="product-card-image"  src="images/hotel-3.jpg" width="300" height="212" alt="Жёлтые горы и голубое небо.">
             <h3 class="product-card-title">Desert Quail Inn</h3>
           </a>
           <dl class="product-card-hotel-price">
             <dt class="product-card-type">Гостиница</dt>
             <dd class="product-card-price">От 2500 ₽</dd>
           </dl>
-          <a href="#" class="button product-card-button">подробнее</a>
-          <button type="submit" class="button product-card-submit">в избранное</button>
-          <img src="#" alt="звёздочка">
-          <button class="button product-button-rating">Рейтинг: 6,9</button>
+          <a class="button product-card-button" href="#">подробнее</a>
+          <button class="button product-card-submit" type="submit">в избранное</button>
+          <div class="hotel-stars">
+            <span class="visually-hidden">3 звезды</span>
+            <span class="stars-count-3"></span>
+          </div>
+          <span class="button product-button-rating">Рейтинг: 6,9</span>
         </li>
         <li class="product-card">
-          <a href="#" class="product-card-link">
-            <img src="#" class="product-card-image" alt="подсвеченные горы на фоне звёздного неба">
+          <a class="product-card-link" href="#">
+            <img class="product-card-image" src="images/hotel-4.jpg" width="300" height="212" alt="Подсвеченные горы на фоне звёздного неба.">
             <h3 class="product-card-title">GreenTree Inn</h3>
           </a>
           <dl class="product-card-hotel-price">
             <dt class="product-card-type">Гостиница</dt>
             <dd class="product-card-price">От 1500 ₽</dd>
           </dl>
-          <a href="#" class="button product-card-button">подробнее</a>
-          <button type="submit" class="button product-card-submit">в избранное</button>
-          <img src="#" alt="звёздочка">
-          <button class="button product-button-rating">Рейтинг: 5,0</button>
+          <a class="button product-card-button" href="#">подробнее</a>
+          <button class="button product-card-submit" type="submit">в избранное</button>
+          <div class="hotel-stars">
+            <span class="visually-hidden">2 звезды</span>
+            <span class="stars-count-2"></span>
+          </div>
+          <span class="button product-button-rating">Рейтинг: 5,0</span>
         </li>
       </ul>
 
@@ -181,19 +201,19 @@
           <a class="pagination-link pagination-current">1</a>
         </li>
         <li class="pagination-item">
-          <a href="#" class="pagination-link">2</a>
+          <a class="pagination-link" href="#" >2</a>
         </li>
         <li class="pagination-item">
-          <a href="#" class="pagination-link">3</a>
+          <a class="pagination-link" href="#" >3</a>
         </li>
         <li class="pagination-item">
-          <a href="#" class="pagination-link">4</a>
+          <a class="pagination-link" href="#" >4</a>
         </li>
         <li class="pagination-item">
           <a class="pagination-link">...</a>
         </li>
         <li class="pagination-item">
-          <a href="#" class="pagination-link">10</a>
+          <a class="pagination-link" href="#" >10</a>
         </li>
       </ul>
 
@@ -202,9 +222,9 @@
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru" method="post">
-          <label for="subscribe-email" class="visually-hidden"></label>
-          <input type="email" name="email" id="subscribe-email" class="subscribe-email" placeholder="Ваш e-mail" required>
-          <button type="submit" class="subscribe-button">подписаться</button>
+          <label class="visually-hidden" for="subscribe-email"></label>
+          <input class="subscribe-email" type="email" name="email" id="subscribe-email" placeholder="Ваш e-mail" required>
+          <button class="subscribe-button" type="submit">подписаться</button>
         </form>
       </section>
     </main>
@@ -213,17 +233,25 @@
       <section class="footer-contacts">
         <h2 class="visually-hidden">Давайте дружить</h2>
         <ul class="contacts-social-list">
-          <li class="footer-social-item"><a href="https://vk.com/htmlacademy" class="social-button"><span
-                class="visually-hidden">Вконтакте</span></a></li>
-          <li class="footer-social-item"><a href="https://t.me/htmlacademy" class="social-button"><span
-                class="visually-hidden">Телеграм</span></a>
+          <li class="footer-social-item">
+            <a class="social-button" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
           </li>
-          <li class="footer-social-item"><a href="https://www.youtube.com/user/htmlacademyru"
-              class="social-button"><span class="visually-hidden">Ютуб</span></a></li>
+          <li class="footer-social-item">
+            <a class="social-button" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Телеграм</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Ютуб</span>
+            </a>
+          </li>
         </ul>
         <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a href="https://htmlacademy.ru/" class="contacts-footer-logo">
-          <img src="#" alt="htmlacademy">
+        <a class="contacts-footer-logo" href="https://htmlacademy.ru/">
+          <img src="images/html-academy.svg" width="115" height="33" alt="HTML-academy.">
         </a>
       </section>
     </footer>
