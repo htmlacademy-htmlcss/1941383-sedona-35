@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -17,7 +18,7 @@
             <a class="navigation-link navigation-active" href="#">Главная</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#" >О седоне</a>
+            <a class="navigation-link" href="#">О седоне</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
@@ -35,19 +36,21 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Хочу сюда!</a>
+            <a class="button button-here" href="#">ХОЧУ СЮДА!</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="main-index">
-      <section class="welcome">
-        <img class="heading" src="images/welcome.png" width="188" height="45" alt="welcome.">
-        <img class="welcome-slogan" src="images/to-the-gorgeous.png" width="256" height="29" alt="To the gorgeous.">
-        <h1 class="visually-hidden">Седона</h1>
-        <img class="welcome-title" src="images/sedona-title.png" width="457" height="213" alt="Логотип Седона.">
-      </section>
+      <div class="hero-block">
+        <section class="welcome">
+          <img class="heading" src="images/welcome.png" width="188" height="45" alt="welcome.">
+          <img class="welcome-slogan" src="images/to-the-gorgeous.png" width="256" height="29" alt="To the gorgeous.">
+          <h1 class="visually-hidden">Седона</h1>
+          <img class="welcome-title" src="images/sedona-title.png" width="457" height="213" alt="Логотип Седона.">
+        </section>
+      </div>
 
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества Седоны</h2>
@@ -87,7 +90,8 @@
             <p class="advantages-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="advantages-item">
-            <img class="advantages-ggift" src="images/icons/souvenirs.svg" width="64" height="76" alt="Коробка с бантиком.">
+            <img class="advantages-ggift" src="images/icons/souvenirs.svg" width="64" height="76"
+              alt="Коробка с бантиком.">
             <h3 class="advantages-title">Сувениры</h3>
             <p class="advantages-description">Не только китайского, но и настоящего местного производства!</p>
           </li>
@@ -96,16 +100,18 @@
 
       <section class="find-hotel">
         <h2 class="find-hotel-title">Заинтересовались?</h2>
-        <p class="find-hotel-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="find-hotel-button" href="">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+        <p class="find-hotel-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
+          гостиниц в Седоне</p>
+        <a class="button-big find-hotel-button" href="">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
       </section>
 
       <section class="subscribe">
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+        <h2 class="subscribe-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru" method="post">
-          <input class="subscribe-email" type="email" name="email" id="subscribe-email" placeholder="Ваш e-mail" required>
-          <button class="subscribe-button" type="submit">ПОДПИСАТЬСЯ</button>
+          <input class="subscribe-email" type="email" name="email" id="subscribe-email" placeholder="Ваш e-mail"
+            required>
+          <button class="button-big subscribe-button" type="submit">ПОДПИСАТЬСЯ</button>
         </form>
       </section>
     </main>
