@@ -198,6 +198,21 @@ button:disabled:hover {
   padding: 20px 16px;
 }
 
+.navigation-link:hover {
+  background-color: #82b3d3;
+  color: #ffffff;
+}
+
+.navigation-link:focus {
+  box-shadow: inset 0 0 0 4px #82b3d3;
+  outline: none;
+}
+
+.navigation-link:active {
+  background-color: #82b3d3;
+  color:rgba(255, 255, 255, 0.3);
+}
+
 .navigation-active::before {
     position: absolute;
     bottom: 0;
@@ -206,6 +221,10 @@ button:disabled:hover {
     content: "";
     left: 16px;
     right: 16px;
+}
+
+.navigation-active {
+  cursor: default;
 }
 
 .navigation-list {
@@ -229,10 +248,17 @@ button:disabled:hover {
 }
 
 .search {
-  background-image: url(../images/icons/search.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
   padding: 22px 12px;
+}
+
+.search-svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .favorites {
@@ -242,6 +268,15 @@ button:disabled:hover {
   margin-right: 20px;
   padding: 22px 12px;
   position: relative;
+}
+
+.favorites-svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .favorites-count {
@@ -456,7 +491,7 @@ button:disabled:hover {
 .advantages-item-souvenirs::before {
   content: "";
   position: absolute;
-  background-image: url(..//images/icons/housing.svg);
+  background-image: url(../images/icons/housing.svg);
   background-repeat: no-repeat;
   width: 75px;
   height: 76px;
@@ -465,12 +500,12 @@ button:disabled:hover {
 }
 
 .advantages-item-food::before {
-  background-image: url(..//images/icons/food.svg);
+  background-image: url(../images/icons/food.svg);
   top: 81px;
 }
 
 .advantages-item-souvenirs::before {
-  background-image: url(..//images/icons/souvenirs.svg);
+  background-image: url(../images/icons/souvenirs.svg);
   left: 168px;
   top: 78px;
 }
@@ -793,7 +828,7 @@ button:disabled:hover {
 }
 
 .sort-button:focus {
-  border-color: #68A2CA;
+  border-color: #68a2ca;
 }
 
 .sort-button:active {
@@ -830,6 +865,7 @@ button:disabled:hover {
 .product-card {
   max-width: 340px;
   padding: 20px;
+  outline: 1px solid #e6e6e6;
 }
 
 .product-card-link {
@@ -895,6 +931,31 @@ button:disabled:hover {
   width: 140px;
   margin-left: auto;
   cursor: default;
+}
+
+.hotel-stars {
+  display: flex;
+}
+
+.stars-count {
+  min-width: 140px;
+  background-image: url(../images/icons/star.svg);
+  background-repeat: space;
+  background-position: center;
+  height: 17px;
+  align-self: center;
+}
+
+.stars-count-4 {
+  min-width: 89px;
+}
+
+.stars-count-3 {
+  min-width: 66px;
+}
+
+.stars-count-2 {
+  min-width: 42px;
 }
 
 .pagination {
