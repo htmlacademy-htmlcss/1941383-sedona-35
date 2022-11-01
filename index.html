@@ -183,23 +183,54 @@
           <h2 class="modal-title">Поиск гостиницы в седоне</h2>
           <button class="modal-close-button">
             <span class="visually-hidden">Закрыть</span>
+            <svg class="modal-close-cross" width="15" height="15" viewBox="0 0 15 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z" />
+            </svg>
           </button>
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
             <label class="check-in-form-title" for="check-in">Дата заезда:</label>
-            <input class="check-in-form-field" name="check-in" id="check-in" type="text" placeholder="27 апреля 2020">
+            <input class="check-in-form-field date-input" name="check-in" id="check-in" type="text" placeholder="27 апреля 2020">
             <label class="departure-form-title" for="departure">Дата выезда:</label>
-            <input class="departure-form-field" name="departure" id="departure" type="text" placeholder="1 сентября 2023">
+            <input class="departure-form-field date-input" name="departure" id="departure" type="text" placeholder="1 сентября 2023">
             <label class="adults-amount-title" for="adults">Взрослые:</label>
             <span class="amount-field amount-field-left">
-              <button class="amount-minus"></button>
+              <button class="amount-minus amount-button" type="button">
+                <svg class="plus-minus-button" width="14" height="2" viewBox="0 0 14 2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0L0 2L14 2V0L0 0Z" />
+                </svg>
+              </button>
               <input class="adults-amount-field field-number" name="adults" id="adults" type="number" value="2">
-              <button class="amount-plus"></button>
+              <button class="amount-plus amount-button" type="button">
+                <svg class="plus-minus-button" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                </svg>
+              </button>
             </span>
-            <label class="children-amount-title" for="children">Дети:</label>
+            <div class="children-title-group">
+              <label class="children-amount-title" for="children">Дети:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button">
+                  <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="13" cy="13" r="13" fill="currentColor" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z"
+                      fill="white" />
+                  </svg>
+                </button>
+                <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+            </div>
             <span class="amount-field amount-field-right">
-              <button class="amount-minus" type="button"></button>
+              <button class="amount-minus amount-button" type="button">
+                <svg class="plus-minus-button" width="14" height="2" viewBox="0 0 14 2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0L0 2L14 2V0L0 0Z" />
+                </svg>
+              </button>
               <input class="children-amount-field field-number" name="children" id="children" type="number" value="2">
-              <button class="amount-plus" type="button"></button>
+              <button class="amount-plus amount-button" type="button">
+                <svg class="plus-minus-button" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                </svg>
+              </button>
             </span>
             <button class="modal-button-search" type="submit">Найти</button>
           </form>

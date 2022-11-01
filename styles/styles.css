@@ -1172,11 +1172,31 @@ body {
   height: 52px;
   background-color: #F2F2F2;
   border: none;
-  background-image: url(../images/icons/cross.svg);
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-close-cross {
+  fill: #000000;
+  align-self: center;
+  width: 14px;
+  height: 14px;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus {
+  background-color: #e6e6e6;
+  border: 3px solid #83B3D3;
+  outline: none;
+}
+
+.modal-close-button:active {
+  opacity: 0.3;
 }
 
 .modal-title {
@@ -1204,12 +1224,15 @@ body {
   position: relative;
 }
 
-label.children-amount-title {
+.children-title-group {
   grid-column: 4/5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
 }
 
-.check-in-form-field,
-.departure-form-field {
+.date-input {
   grid-column: 2/-1;
   font-weight: 700;
   font-size: 18px;
@@ -1219,8 +1242,22 @@ label.children-amount-title {
   border: none;
   border-radius: 4px;
   background-color: #f2f2f2;
-
 }
+
+.date-input:hover {
+  background-color: #e6e6e6;
+}
+
+.date-input:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83B3D3;
+}
+
+.date-input:active {
+  outline: #000000;
+  box-shadow: inset 0 0 0 4px #000000;
+}
+
 
 .check-in-form-title::before {
   position: absolute;
@@ -1253,6 +1290,7 @@ label.children-amount-title {
 input.check-in-form-field::placeholder,
 input.departure-form-field::placeholder {
   color: #000000;
+  opacity: 0.6;
 }
 
 .amount-field {
@@ -1262,12 +1300,16 @@ input.departure-form-field::placeholder {
   font-size: 18px;
   line-height: 20px;
   background-color: #f2f2f2;
+  border-radius: 4px;
 }
 
 .amount-field button {
   border: none;
-  background-color: #f2f2f2;
+  background-color: transparent;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .amount-field-left {
@@ -1278,12 +1320,29 @@ input.departure-form-field::placeholder {
   grid-column: -1/-2;
 }
 
-.amount-minus {
-  background: url(../images/icons/minus.svg) no-repeat center;
+.plus-minus-button {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
-.amount-plus {
-  background: url(../images/icons/plus.svg) no-repeat center;
+.amount-button:hover .plus-minus-button {
+  fill: #000000;
+}
+
+.amount-button:focus {
+  border: 3px solid #82B3D3;
+  outline: none;
+  border-radius: 4px;
+}
+.amount-button:focus .plus-minus-button{
+  fill: #000000;
+}
+
+.amount-button:active .plus-minus-button {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.amount-button:active {
+  border: none;
 }
 
 .field-number {
@@ -1300,6 +1359,64 @@ input.departure-form-field::placeholder {
   display: none;
 }
 
+.tooltip {
+  position: relative;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+  cursor: pointer;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  color: #83B3D3;
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+  color: #68a2ca;
+}
+
+.tooltip-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+
+  position: absolute;
+  width: 256px;
+  height: 143px;
+  transform: translateX(50%);
+  right: 50%;
+  top: 41px;
+  background: #333333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 15px 18px 18px 22px;
+  display: none;
+}
+
+.tooltip-text::before {
+  content: "";
+  background: url(../images/icons/triangle.svg) no-repeat center;
+  position: absolute;
+  width: 19px;
+  top: -9px;
+  height: 9px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
 
 .modal-button-search {
   grid-column: 1/-1;
@@ -1314,4 +1431,13 @@ input.departure-form-field::placeholder {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.modal-button-search:hover,
+.modal-button-search:focus {
+  background-color: #68a2ca;
+}
+
+.modal-button-search:active {
+  opacity: 0.3;
 }
