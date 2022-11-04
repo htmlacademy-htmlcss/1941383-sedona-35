@@ -84,7 +84,7 @@ body {
   cursor: pointer;
 }
 
-.button-brown:focus {
+.button-brown:focus-visible {
   background-color: #615048;
 }
 
@@ -108,8 +108,8 @@ body {
   cursor: pointer;
 }
 
-.button-blue:focus {
-  background-color: #68A2CA;
+.button-blue:focus-visible {
+  background-color: #68a2ca;
 }
 
 .button-blue:active {
@@ -131,7 +131,7 @@ body {
   cursor: pointer;
 }
 
-.button-green:focus {
+.button-green:focus-visible {
   background-color: #6c9e42;
 }
 
@@ -153,7 +153,7 @@ body {
   cursor: pointer;
 }
 
-.button-transparent:focus {
+.button-transparent:focus-visible {
   outline: 3px solid #83b3d3;
 }
 
@@ -195,11 +195,13 @@ body {
 .navigation-link:hover {
   background-color: #82b3d3;
   color: #ffffff;
+  border-radius: 4px;
 }
 
-.navigation-link:focus {
+.navigation-link:focus-visible {
   box-shadow: inset 0 0 0 4px #82b3d3;
   outline: none;
+  border-radius: 4px;
 }
 
 .navigation-link:active {
@@ -614,10 +616,11 @@ body {
   appearance: none;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  background: url(../images/icons/arrow-bottom.svg) 250px 20px no-repeat;
 }
 
 .filter-content:hover,
-.filter-content:focus {
+.filter-content:focus-visible {
   border-color: #68a2ca;
 }
 
@@ -683,11 +686,11 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.breadscrumbs-link-focus {
+.breadscrumbs-link:focus-visible {
   color: #ffffff;
 }
 
-.breadscrumbs-link-active {
+.breadscrumbs-link:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -798,7 +801,7 @@ body {
   right: -1px;
 }
 
-.control-input[type="checkbox"]:focus + .control-mark {
+.control-input[type="checkbox"]:focus-visible + .control-mark {
   outline: 3px solid #83b3d3;
 }
 
@@ -824,7 +827,7 @@ body {
   border-radius: 50%;
 }
 
-.control-input-radio[type="radio"]:focus + .control-mark-radio {
+.control-input-radio[type="radio"]:focus-visible + .control-mark-radio {
   outline: 3px solid #83b3d3;
 }
 
@@ -889,7 +892,7 @@ body {
   top: -8px;
 }
 
-.range-toggle:focus {
+.range-toggle:focus-visible {
   outline: 3px solid #83b3d3;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
@@ -1016,7 +1019,7 @@ body {
   border-color: #000000;
 }
 
-.sort-button:focus {
+.sort-button:focus-visible {
   outline: none;
   border: 2px solid #68a2ca;
 }
@@ -1187,10 +1190,9 @@ body {
   outline: 1px solid #82b3d3;
 }
 
-.pagination-link:not(.pagination-current).pagination-link:focus {
+.pagination-link:not(.pagination-current).pagination-link:focus-visible {
   background-color: #68a2ca;
   box-shadow: inset 0 0 0 1px #82b3d3;
-  outline: none;
 }
 
 .pagination-link:not(.pagination-current).pagination-link:active {
@@ -1208,6 +1210,15 @@ body {
   line-height: 26px;
   color: #000000;
   background-color: #ffffff;
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  min-width: 60px;
+  min-height: 60px;
+  box-sizing: border-box;
+  padding: 12px 0;
+  text-align: center;
+  border-radius: 4px;
 }
 
 .catalog-subscribe {
@@ -1277,7 +1288,7 @@ body {
   fill: #68a2ca;
 }
 
-.social-button:focus .social-icon {
+.social-button:focus-visible .social-icon {
   fill: #68a2ca;
 }
 
@@ -1299,7 +1310,7 @@ body {
   color: #756157;
 }
 
-.contacts-phone:focus {
+.contacts-phone:focus-visible {
   color: #756157;
 }
 
@@ -1321,7 +1332,7 @@ body {
   fill: #756157;
 }
 
-.contacts-footer-logo:focus .footer-logo-icon {
+.contacts-footer-logo:focus-visible .footer-logo-icon {
   fill: #756157;
 }
 
@@ -1388,9 +1399,16 @@ body {
 }
 
 .modal-close-button:focus {
-  background-color: #e6e6e6;
-  border: 3px solid #83B3D3;
+  outline: 3px solid #7691F8;
+}
+
+.modal-close-button:focus:not(:focus-visible) {
   outline: none;
+}
+
+.modal-close-button:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
 }
 
 .modal-close-button:active {
@@ -1436,7 +1454,6 @@ body {
   font-size: 18px;
   line-height: 24px;
   padding: 12px 20px;
-  background: url(../images/icons/calendar.svg) no-repeat 400px 15px;
   border: none;
   border-radius: 4px;
   background-color: #f2f2f2;
@@ -1447,15 +1464,44 @@ body {
 }
 
 .date-input:focus {
-  background-color: #e6e6e6;
-  outline: 3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
 }
 
 .date-input:active {
   outline: #000000;
-  box-shadow: inset 0 0 0 4px #000000;
+  box-shadow: inset 0 0 0 2px #000000;
 }
 
+.calendar-check {
+  position: absolute;
+  width: 38px;
+  height: 48px;
+  box-sizing: content-box;
+  border: none;
+  margin: 0;
+  padding: 0;
+  left: 539px;
+  top: 0;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.calendar-check-icon {
+  fill: #000000;
+  opacity: 0.3;
+}
+
+.calendar-check:hover .calendar-check-icon {
+  opacity: 1;
+}
+
+.calendar-check:focus-visible .calendar-check-icon {
+  opacity: 1;
+}
+
+.calendar-check:active .calendar-check-icon {
+  opacity: 0.3;
+}
 
 .check-in-form-title::before {
   position: absolute;
@@ -1520,15 +1566,23 @@ input.departure-form-field::placeholder {
 
 .plus-minus-button {
   fill: rgba(117, 97, 87, 0.3);
+  padding: 2px;
+}
+
+.amount-minus .plus-minus-button {
+  padding: 9px 3px;
 }
 
 .amount-button:hover .plus-minus-button {
   fill: #000000;
 }
 
-.amount-button:focus {
-  border: 3px solid #82B3D3;
+.amount-button:focus-visible {
   outline: none;
+}
+
+.amount-button:focus-visible .plus-minus-button {
+  outline: 3px solid #82b3d3;
   border-radius: 4px;
 }
 
@@ -1633,7 +1687,7 @@ input.departure-form-field::placeholder {
 }
 
 .modal-button-search:hover,
-.modal-button-search:focus {
+.modal-button-search:focus-visible {
   background-color: #68a2ca;
 }
 
