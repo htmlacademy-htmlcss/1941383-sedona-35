@@ -258,7 +258,7 @@ body {
 }
 
 .favorites {
-  background-image: url(../images/icons/heart.svg);
+  background-image: url("../images/icons/heart.svg");
   background-position: center;
   background-repeat: no-repeat;
   margin-right: 20px;
@@ -342,7 +342,7 @@ body {
   position: absolute;
   bottom: 0;
   content: "";
-  background-image: url(../images/divider.svg);
+  background-image: url("../images/divider.svg");
   height: 57px;
   width: 1200px;
 }
@@ -488,7 +488,7 @@ body {
 .advantages-item-souvenirs::before {
   content: "";
   position: absolute;
-  background-image: url(../images/icons/housing.svg);
+  background-image: url("../images/icons/housing.svg");
   background-repeat: no-repeat;
   width: 75px;
   height: 76px;
@@ -497,12 +497,12 @@ body {
 }
 
 .advantages-item-food::before {
-  background-image: url(../images/icons/food.svg);
+  background-image: url("../images/icons/food.svg");
   top: 81px;
 }
 
 .advantages-item-souvenirs::before {
-  background-image: url(../images/icons/souvenirs.svg);
+  background-image: url("../images/icons/souvenirs.svg");
   left: 168px;
   top: 78px;
 }
@@ -529,7 +529,7 @@ body {
 }
 
 .subscribe {
-  background-image: url(../images/subscribe.jpg);
+  background-image: url("../images/subscribe.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: #82B3D3;
@@ -599,7 +599,7 @@ body {
 }
 
 .filter-wrapper {
-  background-image: url(../images/filter-content-background.jpg);
+  background-image: url("../images/filter-content-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
@@ -616,7 +616,7 @@ body {
   appearance: none;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-  background: url(../images/icons/arrow-bottom.svg) 250px 20px no-repeat;
+  background: url("../images/icons/arrow-bottom.svg") 250px 20px no-repeat;
 }
 
 .filter-content:hover,
@@ -662,7 +662,7 @@ body {
 .breadscrumbs-link-home:after {
   position: absolute;
   content: "";
-  background-image: url(../images/icons/arrow.svg);
+  background-image: url("../images/icons/arrow.svg");
   width: 8px;
   height: 20px;
   background-repeat: no-repeat;
@@ -792,7 +792,7 @@ body {
 .control-input[type="checkbox"]:checked + .control-mark::before {
   content: "";
   position: absolute;
-  background-image: url(../images/icons/check.svg);
+  background-image: url("../images/icons/check.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 20px;
@@ -1033,15 +1033,15 @@ body {
 }
 
 .sort-table {
-  background-image: url(../images/icons/table.svg);
+  background-image: url("../images/icons/table.svg");
 }
 
 .sort-slide-show {
-  background-image: url(../images/icons/slideshow.svg);
+  background-image: url("../images/icons/slideshow.svg");
 }
 
 .sort-list {
-  background-image: url(../images/icons/list.svg);
+  background-image: url("../images/icons/list.svg");
 }
 
 .products-list {
@@ -1132,7 +1132,7 @@ body {
 
 .stars-count {
   width: 140px;
-  background-image: url(../images/icons/star.svg);
+  background-image: url("../images/icons/star.svg");
   background-repeat: space;
   background-position: center;
   height: 17px;
