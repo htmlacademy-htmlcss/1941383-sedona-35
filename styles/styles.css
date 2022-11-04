@@ -573,12 +573,15 @@ body {
 }
 
 .subscribe-email:hover {
-  background-color: #e6e6e6;;
+  background-color: #e6e6e6;
+  ;
 }
+
 .subscribe-email:focus {
   background-color: #e6e6e6;
-  outline:  3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
+
 .subscribe-email:active {
   background-color: #f2f2f2;
 }
@@ -824,15 +827,34 @@ body {
   gap: 2px;
 }
 
+.min-price-label {
+  position: absolute;
+  width: 17px;
+  height: 24px;
+  color: #000000;
+  opacity: 0.3;
+  z-index: 1;
+  top: 12px;
+  left: 106px;
+}
 
 .min-price {
   border-radius: 4px 0 0 4px;
-  background: url(../images/icons/input-text.svg) no-repeat 106px 12px;
 }
 
 .max-price {
   border-radius: 0 4px 4px 0;
-  background: url(../images/icons/input-text-max-price.svg) no-repeat 106px 12px;
+}
+
+.max-price-label {
+  position: absolute;
+  width: 17px;
+  height: 24px;
+  color: #000000;
+  opacity: 0.3;
+  z-index: 1;
+  top: 12px;
+  right: 20px;
 }
 
 .range-scale {
@@ -875,7 +897,7 @@ body {
 }
 
 .range-toggle-max {
-  left: 206px;
+  right: 0;
 }
 
 .range-input {
@@ -932,6 +954,7 @@ body {
   margin: 0;
   margin-right: 70px;
   border: none;
+  position: relative;
 }
 
 .catalog-filter-group {
