@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon.png">
-    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
@@ -180,65 +179,76 @@
               </svg>
             </button>
             <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-              <label class="check-in-form-title" for="check-in"> Дата заезда:</label>
-              <input class="check-in-form-field date-input" name="check-in" id="check-in" type="text" placeholder="27 апреля 2020" required>
-              <button class="calendar-check" type="button">
-                <span class="visually-hidden">Выбрать дату заезда.</span>
-                <svg class="calendar-check-icon" width="16" height="15" viewBox="0 0 16 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.8 10c.3 0 .5-.2.5-.5S6 9 5.8 9c-.3 0-.5.2-.5.5s.2.5.5.5Z" fill="#000" />
-                  <path d="M15 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h14v7ZM1 6V3h2v2h1V3h8v2h1V3h2v3H1Z" fill="#000" />
-                  <path d="M8 10c.3 0 .5-.2.5-.5S8.3 9 8 9s-.5.2-.5.5.2.5.5.5ZM10.3 10c.3 0 .4-.2.4-.5s-.1-.5-.4-.5c-.4 0-.6.2-.6.5s.3.5.6.5ZM5.8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.3-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.3 11c-.4 0-.6.2-.6.5s.3.5.6.5.4-.2.4-.5-.1-.5-.4-.5ZM12.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z" />
-                </svg>
-              </button>
-              <label class="departure-form-title" for="departure">Дата выезда:</label>
-              <input class="departure-form-field date-input" name="departure" id="departure" type="text" placeholder="1 сентября 2023" required>
-              <button class="calendar-check calendar-check-departure" type="button">
-                <span class="visually-hidden">Выбрать дату отъезда.</span>
-                <svg class="calendar-check-icon" width="16" height="15" viewBox="0 0 16 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.8 10c.3 0 .5-.2.5-.5S6 9 5.8 9c-.3 0-.5.2-.5.5s.2.5.5.5Z" fill="#000" />
-                  <path d="M15 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h14v7ZM1 6V3h2v2h1V3h8v2h1V3h2v3H1Z" fill="#000" />
-                  <path d="M8 10c.3 0 .5-.2.5-.5S8.3 9 8 9s-.5.2-.5.5.2.5.5.5ZM10.3 10c.3 0 .4-.2.4-.5s-.1-.5-.4-.5c-.4 0-.6.2-.6.5s.3.5.6.5ZM5.8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.3-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.3 11c-.4 0-.6.2-.6.5s.3.5.6.5.4-.2.4-.5-.1-.5-.4-.5ZM12.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z" />
-                </svg>
-              </button>
-              <label class="adults-amount-title" for="adults">Взрослые:</label>
-              <span class="amount-field amount-field-left">
-                <button class="amount-minus amount-button" type="button">
-                  <svg class="plus-minus-button" width="14" height="2" viewBox="0 0 14 2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0L0 2L14 2V0L0 0Z" />
+              <div class="check-in-container">
+                <label class="check-in-form-title" for="check-in"> Дата заезда:</label>
+                <input class="check-in-form-field date-input" name="check-in" id="check-in" type="text" placeholder="27 апреля 2020" required>
+                <button class="calendar-check" type="button">
+                  <span class="visually-hidden">Выбрать дату заезда.</span>
+                  <svg class="calendar-check-icon" width="16" height="15" viewBox="0 0 16 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.8 10c.3 0 .5-.2.5-.5S6 9 5.8 9c-.3 0-.5.2-.5.5s.2.5.5.5Z" fill="#000" />
+                    <path d="M15 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h14v7ZM1 6V3h2v2h1V3h8v2h1V3h2v3H1Z" fill="#000" />
+                    <path d="M8 10c.3 0 .5-.2.5-.5S8.3 9 8 9s-.5.2-.5.5.2.5.5.5ZM10.3 10c.3 0 .4-.2.4-.5s-.1-.5-.4-.5c-.4 0-.6.2-.6.5s.3.5.6.5ZM5.8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.3-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.3 11c-.4 0-.6.2-.6.5s.3.5.6.5.4-.2.4-.5-.1-.5-.4-.5ZM12.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z" />
                   </svg>
                 </button>
-                <input class="adults-amount-field field-number" name="adults" id="adults" type="number" value="2" required>
-                <button class="amount-plus amount-button" type="button">
-                  <svg class="plus-minus-button" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                <span class="message-box message-box-error">Мы не можем отправить вас в прошлое.</span>
+              </div>
+
+              <div class="check-in-container">
+                <label class="departure-form-title" for="departure">Дата выезда:</label>
+                <input class="departure-form-field date-input" name="departure" id="departure" type="text" placeholder="1 сентября 2023" required>
+                <button class="calendar-check" type="button">
+                  <span class="visually-hidden">Выбрать дату отъезда.</span>
+                  <svg class="calendar-check-icon" width="16" height="15" viewBox="0 0 16 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.8 10c.3 0 .5-.2.5-.5S6 9 5.8 9c-.3 0-.5.2-.5.5s.2.5.5.5Z" fill="#000" />
+                    <path d="M15 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h14v7ZM1 6V3h2v2h1V3h8v2h1V3h2v3H1Z" fill="#000" />
+                    <path d="M8 10c.3 0 .5-.2.5-.5S8.3 9 8 9s-.5.2-.5.5.2.5.5.5ZM10.3 10c.3 0 .4-.2.4-.5s-.1-.5-.4-.5c-.4 0-.6.2-.6.5s.3.5.6.5ZM5.8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.3-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10.3 11c-.4 0-.6.2-.6.5s.3.5.6.5.4-.2.4-.5-.1-.5-.4-.5ZM12.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z" />
                   </svg>
                 </button>
-              </span>
-              <div class="children-title-group">
-                <label class="children-amount-title" for="children">Дети:</label>
-                <span class="tooltip">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
-                    <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="13" cy="13" r="13" fill="currentColor" />
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white" />
+                <span class="message-box">На эти даты есть свободные номера. Пока есть.</span>
+              </div>
+              <div class="amount-adults-container">
+                <label class="adults-amount-title" for="adults">Взрослые:</label>
+                <span class="amount-field amount-field-left">
+                  <button class="amount-minus amount-button" type="button">
+                    <svg class="plus-minus-button" width="14" height="2" viewBox="0 0 14 2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L0 2L14 2V0L0 0Z" />
                     </svg>
                   </button>
-                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  <input class="adults-amount-field field-number" name="adults" id="adults" type="number" value="2" required>
+                  <button class="amount-plus amount-button" type="button">
+                    <svg class="plus-minus-button" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                    </svg>
+                  </button>
                 </span>
               </div>
-              <span class="amount-field amount-field-right">
-                <button class="amount-minus amount-button" type="button">
-                  <svg class="plus-minus-button" width="14" height="2" viewBox="0 0 14 2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0L0 2L14 2V0L0 0Z" />
-                  </svg>
-                </button>
-                <input class="children-amount-field field-number" name="children" id="children" type="number" value="2" required>
-                <button class="amount-plus amount-button" type="button">
-                  <svg class="plus-minus-button" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
-                  </svg>
-                </button>
-              </span>
+              <div class="amount-children-container">
+                <div class="children-title-group">
+                  <label class="children-amount-title" for="children">Дети:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                      <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="13" cy="13" r="13" fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white" />
+                      </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  </span>
+                </div>
+                <span class="amount-field amount-field-right">
+                  <button class="amount-minus amount-button" type="button">
+                    <svg class="plus-minus-button" width="14" height="2" viewBox="0 0 14 2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L0 2L14 2V0L0 0Z" />
+                    </svg>
+                  </button>
+                  <input class="children-amount-field field-number" name="children" id="children" type="number" value="2" required>
+                  <button class="amount-plus amount-button" type="button">
+                    <svg class="plus-minus-button" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                    </svg>
+                  </button>
+                </span>
+              </div>
               <button class="modal-button-search" type="submit">Найти</button>
             </form>
           </section>
