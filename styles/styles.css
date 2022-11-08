@@ -29,6 +29,7 @@ body {
   background-color: #f2f2f2;
   color: #000000;
   min-width: 1200px;
+  word-break: break-all;
 }
 
 img {
@@ -568,7 +569,6 @@ img {
 
 .subscribe-form {
   display: flex;
-  flex-wrap: wrap;
   gap: 2px;
   width: 685px;
   margin: 0 auto;
@@ -864,7 +864,7 @@ img {
 
 .max-price-label {
   position: absolute;
-  width: 17px;
+  width: 18px;
   height: 24px;
   color: #000000;
   opacity: 0.3;
@@ -916,6 +916,7 @@ img {
 }
 
 .range-input {
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -954,6 +955,7 @@ img {
   max-width: 500px;
   margin-right: auto;
   box-sizing: content-box;
+  flex-wrap: wrap;
 }
 
 .filter-right-column {
@@ -961,6 +963,7 @@ img {
   max-width: 560px;
   margin-left: auto;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .filter-price {
@@ -1551,7 +1554,7 @@ img {
 .message-box {
   position: absolute;
   font-family: "PT Sans", sans-serif;
-  top: 52px;
+  bottom: -22px;
   left: 137px;
   padding: 0 20px;
   width: 395px;
