@@ -845,7 +845,7 @@ img {
 
 .min-price-label {
   position: absolute;
-  width: 17px;
+  min-width: 17px;
   height: 24px;
   color: #000000;
   opacity: 0.3;
@@ -864,7 +864,7 @@ img {
 
 .max-price-label {
   position: absolute;
-  width: 18px;
+  min-width: 18px;
   height: 24px;
   color: #000000;
   opacity: 0.3;
